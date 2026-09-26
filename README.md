@@ -26,15 +26,17 @@ server.
 ### Platforms
 
 - **macOS**: supported.
-- **Linux**: `.deb` and `.rpm` installs are supported. The AppImage and Flatpak builds keep
-  `meltemi-mcp` inside their own sandbox, where the plugin can't start it.
+- **Linux**: `.deb` and `.rpm` installs are supported. The AppImage and Flatpak builds are not
+  supported by this plugin yet, because they keep `meltemi-mcp` inside their own package.
 - **Windows**: not supported by this plugin yet, because its launcher is a POSIX shell script. Add the
   server by hand with the path from **Settings → Agents**:
   `claude mcp add meltemi -- "C:\path\to\meltemi-mcp.exe"`.
 
-The server runs on your machine, so the plugin works where Claude can start local programs: Claude Code
-and Claude Desktop. For Claude in the browser, Meltemi has a separate remote connector that you run
-yourself; see **Settings → Agents → Connecting Claude** in the app.
+The server runs on your machine, so the plugin works in Claude Code and in Cowork sessions that run on
+your computer. Chat, on the web and in the desktop app, doesn't start local servers; for chat, Meltemi
+has a separate remote connector that you run yourself (see **Settings → Agents → Connecting Claude** in
+the app). Cowork doesn't ask for plugin options, so if you need the **meltemi-mcp location** option,
+set it in Claude Code.
 
 ## What Claude can do
 
