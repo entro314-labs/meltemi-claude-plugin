@@ -1,0 +1,22 @@
+{
+  "name": "meltemi",
+  "displayName": "Meltemi",
+  "version": "0.1.0",
+  "description": "Read, triage, draft and schedule from your Meltemi mailbox. Runs the MCP server bundled with the Meltemi desktop app; what it may do is set in Meltemi's Settings → Agents.",
+  "author": {
+    "name": "Entro314 Labs",
+    "url": "https://meltemi.email"
+  },
+  "homepage": "https://meltemi.email",
+  "repository": "https://github.com/entro314-labs/meltemi-claude-plugin",
+  "license": "MIT",
+  "keywords": ["email", "calendar", "mail", "inbox", "local-first"],
+  "userConfig": {
+    "mcp_path": {
+      "type": "file",
+      "title": "meltemi-mcp location",
+      "description": "Leave empty on macOS and on Linux .deb/.rpm installs. Otherwise paste the path shown in Meltemi → Settings → Agents.",
+      "default": ""
+    }
+  }
+}

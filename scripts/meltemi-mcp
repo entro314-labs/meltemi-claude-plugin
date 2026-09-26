@@ -1,0 +1,32 @@
+#!/bin/sh
+# Starts the MCP server that ships inside the Meltemi desktop app.
+#
+# The plugin carries no server of its own: meltemi-mcp is installed next to
+# the app's main executable and reads the app's local mail store. This script
+# only finds it and hands over stdin/stdout. Nothing is downloaded.
+#
+# $1 is the "meltemi-mcp location" plugin option. A path given there is used
+# as-is and never second-guessed: a wrong override fails loudly instead of
+# silently falling back to a different install.
+
+if [ -n "$1" ]; then
+  if [ -x "$1" ]; then
+    exec "$1"
+  fi
+  echo "meltemi plugin: the configured meltemi-mcp location is not an executable file: $1" >&2
+  exit 1
+fi
+
+# Where installers put it: the macOS app bundle (also where the Homebrew cask
+# installs), a per-user Applications folder, and the Linux .deb/.rpm packages.
+for candidate in \
+  "/Applications/Meltemi.app/Contents/MacOS/meltemi-mcp" \
+  "$HOME/Applications/Meltemi.app/Contents/MacOS/meltemi-mcp" \
+  "/usr/bin/meltemi-mcp"; do
+  if [ -x "$candidate" ]; then
+    exec "$candidate"
+  fi
+done
+
+echo "meltemi plugin: meltemi-mcp not found. Install Meltemi from https://meltemi.email, or set the plugin's \"meltemi-mcp location\" option to the path shown in Meltemi → Settings → Agents." >&2
+exit 1
