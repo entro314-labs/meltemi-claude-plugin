@@ -11,8 +11,9 @@ with at least one account.
 
 ## Setup
 
-1. Install Meltemi from [meltemi.email](https://meltemi.email) and open it once, so it creates its
-   mail store.
+1. Install Meltemi from its [releases page](https://github.com/entro314-labs/meltemi-releases/releases)
+   (macOS, Windows and Linux builds), or on macOS with Homebrew:
+   `brew install --cask entro314-labs/tap/meltemi`. Open it once, so it creates its mail store.
 2. Install this plugin.
 3. In Meltemi, open **Settings → Agents** and choose what Claude may do (see below).
 

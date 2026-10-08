@@ -28,5 +28,5 @@ for candidate in \
   fi
 done
 
-echo "meltemi plugin: meltemi-mcp not found. Install Meltemi from https://meltemi.email, or set the plugin's \"meltemi-mcp location\" option to the path shown in Meltemi → Settings → Agents." >&2
+echo "meltemi plugin: meltemi-mcp not found. Install Meltemi from https://github.com/entro314-labs/meltemi-releases/releases (on macOS: brew install --cask entro314-labs/tap/meltemi), or set the plugin's \"meltemi-mcp location\" option to the path shown in Meltemi → Settings → Agents." >&2
 exit 1
