@@ -45,14 +45,15 @@ set it in Claude Code.
 What Claude may do is decided in Meltemi, not in the plugin. Each scope is a switch in
 **Settings → Agents**, and switching one off applies to the next call.
 
-| Scope      | Default | Covers                                                   |
-| ---------- | ------- | -------------------------------------------------------- |
-| `read`     | on      | mailbox overview, whole conversations, search, folders   |
-| `triage`   | on      | archive, trash, star, colour flags, mark read or unread  |
-| `snooze`   | on      | snoozing conversations                                   |
-| `draft`    | on      | writing into your Drafts folder                          |
-| `calendar` | on      | reading your schedule, creating events, answering invites |
-| `send`     | **off** | sending mail in your name                                |
+| Scope      | Default | Covers                                                                         |
+| ---------- | ------- | ------------------------------------------------------------------------------ |
+| `read`     | on      | mailbox overview, whole conversations, search, folders                         |
+| `triage`   | on      | archive, trash, star, colour flags, mark read or unread                        |
+| `snooze`   | on      | snoozing conversations                                                         |
+| `draft`    | on      | saving drafts in Meltemi (they stay in the app, not on your mail server)       |
+| `calendar` | on      | reading your schedule, creating events, answering invites                      |
+| `people`   | **off** | other people's availability and shared correspondents (Meltemi 0.9 and later) |
+| `send`     | **off** | sending mail in your name                                                      |
 
 With `send` on, a message goes out without asking only when all three hold: every recipient is someone
 you have sent mail to before, Claude has sent fewer messages in the last hour than the hourly limit,
