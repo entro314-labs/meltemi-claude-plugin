@@ -138,4 +138,6 @@ contact us.
 
 ## License
 
-MIT. See [LICENSE](LICENSE). The license covers this plugin's files, not the Meltemi app.
+LGPL-3.0-only. See [LICENSE](LICENSE) for the GNU Lesser General Public License, version 3, and
+[COPYING](COPYING) for the GNU General Public License it builds on. The license covers this plugin's
+files, not the Meltemi app. Version 0.1.0 was released under the MIT license.

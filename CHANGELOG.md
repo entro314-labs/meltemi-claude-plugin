@@ -26,3 +26,5 @@ All notable changes to the Meltemi plugin for Claude are documented here. The fo
 - Two README statements are corrected. A send or an invitation answer goes out directly; it is
   not queued for the app to deliver. A change can be reverted before or after it has reached your
   mail server, and a sent message, a saved draft and an invitation answer cannot be reverted.
+- The plugin is licensed under LGPL-3.0-only from this version. Version 0.1.0 was released under the
+  MIT license.
