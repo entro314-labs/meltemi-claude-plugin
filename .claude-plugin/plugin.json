@@ -1,7 +1,7 @@
 {
   "name": "meltemi",
   "displayName": "Meltemi",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Read, triage, draft and schedule from your Meltemi mailbox. Runs the MCP server bundled with the Meltemi desktop app; what it may do is set in Meltemi's Settings → Agents.",
   "author": {
     "name": "Entro314 Labs",
