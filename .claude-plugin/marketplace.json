@@ -1,0 +1,14 @@
+{
+  "name": "meltemi",
+  "owner": { "name": "Entro314 Labs", "url": "https://meltemi.email" },
+  "metadata": {
+    "description": "The Meltemi plugin for Claude."
+  },
+  "plugins": [
+    {
+      "name": "meltemi",
+      "source": "./",
+      "description": "Read, triage, draft and schedule from your Meltemi mailbox, through the MCP server bundled with the Meltemi desktop app."
+    }
+  ]
+}
