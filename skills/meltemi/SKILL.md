@@ -90,7 +90,8 @@ into smaller calls, reword it or retry to get past the limit.
 - Every change you make is recorded in Meltemi's Agent activity, and so is every attempt that was
   refused or held. Reading is not recorded.
 - The result of a change carries an `actionId`. `set_labels` returns one for each label, under
-  `changes`. Keep them, with the subject of the conversation each belongs to.
+  `changes`. Keep them, with the subject of the conversation each belongs to. A sent message has
+  none: its result says `delivered`.
 - `revert_action` with an `actionId` puts back a read or unread mark, a star, a marker, an
   archive, a trash, a snooze or a label, whether or not the change has reached the mail server.
   It needs the `triage` scope and the scope of the action it undoes.
