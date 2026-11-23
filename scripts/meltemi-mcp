@@ -19,10 +19,16 @@ fi
 
 # Where installers put it: the macOS app bundle (also where the Homebrew cask
 # installs), a per-user Applications folder, and the Linux .deb/.rpm packages.
+# After those, the links Meltemi's own "Use Meltemi from Terminal" makes:
+# /usr/local/bin on macOS, ~/.local/bin on Linux. They point at whichever copy
+# of the app made them, so an install somewhere else is found too. A link
+# whose target is gone is not executable and is skipped.
 for candidate in \
   "/Applications/Meltemi.app/Contents/MacOS/meltemi-mcp" \
   "$HOME/Applications/Meltemi.app/Contents/MacOS/meltemi-mcp" \
-  "/usr/bin/meltemi-mcp"; do
+  "/usr/bin/meltemi-mcp" \
+  "/usr/local/bin/meltemi-mcp" \
+  "$HOME/.local/bin/meltemi-mcp"; do
   if [ -x "$candidate" ]; then
     exec "$candidate"
   fi
